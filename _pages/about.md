@@ -35,6 +35,33 @@ Skills
 - **Research Areas:** Large Language Models, Vision-Language Models, Reinforcement Learning, Reasoning, Hallucination, Truthfulness, Interpretability
 - **Development Tools:** Git, Linux, Jupyter
 
+Publications
+======
+
+{% include base_path %}
+
+{% if site.publication_category %}
+  {% for category in site.publication_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        **{{ category[1].title }}**
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endif %}
+
+You can also view all publications on the [dedicated publications page](/publications/) or on my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate).
+
 Awards
 ======
 - Zhiyuan Honor Scholarship, Shanghai Jiao Tong University
