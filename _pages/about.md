@@ -37,30 +37,14 @@ Skills
 
 Publications
 ======
+A complete list of my publications is also available on the [dedicated publications page](/publications/) and on my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate).
 
-{% include base_path %}
-
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        **{{ category[1].title }}**
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-You can also view all publications on the [dedicated publications page](/publications/) or on my [Google Scholar profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate).
+- **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond** (2025, Arxiv). *First author.* Co-authors: Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He. Has GitHub code repository.
+- **On the Perception Bottleneck of VLMs for Chart Understanding** (2025, Arxiv). *First author.* Co-authors: Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He. GitHub code repository: Vision4Chart.
+- **On the Universal Truthfulness Hyperplane Inside LLMs** (EMNLP 2024). *First author.* Co-authors: Shiqi Chen, Yu Cheng, Junxian He. GitHub code repository: Universal_Truthfulness_Hyperplane.
+- **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation** (ICML 2024). Co-authors: Shiqi Chen, Miao Xiong, Junteng Liu, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He.
+- **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models** (NeurIPS 2023). Co-authors: Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He.
+- **Composing Parameter-Efficient Modules with Arithmetic Operations** (NeurIPS 2023). Co-authors: Jinghan Zhang, Shiqi Chen, Junteng Liu, Junxian He.
 
 Awards
 ======
